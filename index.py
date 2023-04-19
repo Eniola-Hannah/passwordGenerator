@@ -34,9 +34,26 @@ if user == "1":
         d = int(numpy.random.random()*10000000000)
         print("here you go -- " + str(d))
 elif user == "2":
-    pass
+    user2 = input("""
+        How many letter password do you want:
+            - 4
+            - 6
+            - 8
+            - 10
+                  - """)
+    if user2 == "4":
+        e = ''.join(random.choices(string.ascii_letters, k=4))
+        print("here you go-- " + str(e))
+    elif user2 == "6":
+        f = ''.join(random.choices(string.ascii_letters, k=6))
+        print("here you go-- " + str(f))
+    elif user2 == "8":
+        g = ''.join(random.choices(string.ascii_letters, k=8))
+        print("here you go-- " + str(g))
+    elif user2 == "10":
+        h = ''.join(random.choices(string.ascii_letters, k=10))
+        print("here you go-- " + str(h))
 elif user == "3":
-     
+    pass
 elif user == "0":
     sys.exit()
-

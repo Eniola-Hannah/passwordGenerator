@@ -54,6 +54,24 @@ elif user == "2":
         h = ''.join(random.choices(string.ascii_letters, k=10))
         print("here you go-- " + str(h))
 elif user == "3":
-    pass
+    user3 = input("""
+        How many digit do you want:
+            - 4
+            - 6
+            - 8
+            - 10
+                  - """)
+    if user3 == "4":
+        i = ''.join(random.choices(string.ascii_letters + string.digits, k=4))
+        print("here you go-- " + str(i))
+    elif user3 == "6":
+        j = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
+        print("here you go-- " + str(j))
+    elif user3 == "8":
+        k = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+        print("here you go-- " + str(k))
+    elif user3 == "10":
+        l = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
+        print("here you go-- " + str(l))
 elif user == "0":
     sys.exit()

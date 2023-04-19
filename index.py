@@ -1,4 +1,6 @@
 import numpy
+import string
+import random
 import sys
 import time
 
@@ -34,6 +36,7 @@ if user == "1":
 elif user == "2":
     pass
 elif user == "3":
-    pass
+     
 elif user == "0":
     sys.exit()
+

@@ -5,7 +5,7 @@ import sys
 import time
 
 user = input("""
-    Welcome, So here I have a program that geerate random password:
+    Welcome, So here I have a program that generate random password:
     here are my options;
         1. All numbers
         2. All letters
@@ -33,6 +33,8 @@ if user == "1":
     elif user1 == "10":
         d = int(numpy.random.random()*10000000000)
         print("here you go -- " + str(d))
+    else:
+        print("Input does not match any of the options, try again!!!")
 elif user == "2":
     user2 = input("""
         How many letter password do you want:
@@ -42,17 +44,19 @@ elif user == "2":
             - 10
                   - """)
     if user2 == "4":
-        e = ''.join(random.choices(string.ascii_letters, k=4))
+        e = ''.join(random.choices(string.ascii_lowercase, k=4))
         print("here you go-- " + str(e))
     elif user2 == "6":
-        f = ''.join(random.choices(string.ascii_letters, k=6))
+        f = ''.join(random.choices(string.ascii_lowercase, k=6))
         print("here you go-- " + str(f))
     elif user2 == "8":
-        g = ''.join(random.choices(string.ascii_letters, k=8))
+        g = ''.join(random.choices(string.ascii_lowercase, k=8))
         print("here you go-- " + str(g))
     elif user2 == "10":
-        h = ''.join(random.choices(string.ascii_letters, k=10))
+        h = ''.join(random.choices(string.ascii_lowercase, k=10))
         print("here you go-- " + str(h))
+    else:
+        print("Input does not match any of the options, try again!!!")
 elif user == "3":
     user3 = input("""
         How many digit do you want:
@@ -62,16 +66,20 @@ elif user == "3":
             - 10
                   - """)
     if user3 == "4":
-        i = ''.join(random.choices(string.ascii_letters + string.digits, k=4))
+        i = ''.join(random.choices(string.ascii_lowercase + string.digits, k=4))
         print("here you go-- " + str(i))
     elif user3 == "6":
-        j = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
+        j = ''.join(random.choices(string.ascii_lowercase + string.digits, k=6))
         print("here you go-- " + str(j))
     elif user3 == "8":
-        k = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+        k = ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
         print("here you go-- " + str(k))
     elif user3 == "10":
-        l = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
+        l = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
         print("here you go-- " + str(l))
+    else:
+        print("Input does not match any of the options, try again!!!")
 elif user == "0":
     sys.exit()
+else:
+    print("Input does not match any of the options, try again!!!")
